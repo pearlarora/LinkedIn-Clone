@@ -6,28 +6,27 @@ function Sidebar() {
   return (
     <div className="sidebar">
       <div className="sidebar-top">
-        <img src="" alt="cover" />
-        <Avatar />
+        <img src="https://images.unsplash.com/photo-1579546929518-9e396f3cc809?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1950&q=80" alt="cover" />
+        <Avatar className="sidebar-avatar" />
         <h2>Pearl Arora</h2>
-        <h4>
-          Vice President, Women In Coding Club, NCU | Team Editor, Rotaract Club
-          of New Delhi
-        </h4>
+        <p>
+          Student, The NorthCap University
+        </p>
       </div>
 
       <div className="sidebar-stats">
         <div className="sidebar-stat">
-          <p>Who viewed your profile</p>
+          <h4>Who viewed your profile</h4>
           <p className="sidebar-statNumber">66</p>
         </div>
         <div className="sidebar-stat">
-          <p>Views of your post</p>
+          <h4>Views of your post</h4>
           <p className="sidebar-statNumber">222</p>
         </div>
       </div>
 
       <div className="sidebar-bottom">
-        <h2>Recent</h2>
+        <h3>Recent</h3>
       </div>
     </div>
   );

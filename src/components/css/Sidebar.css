@@ -1,4 +1,57 @@
+h4 {
+  color: grey;
+}
+
 .sidebar {
-  position: fixed;
-  top: 100px;
+  margin-top: 100px;
+  /* position: sticky;
+  top: 100px; */
+  border-radius: 10px;
+  text-align: center;
+  height: fit-content;
+}
+
+.sidebar-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid lightgrey;
+  border-bottom: none;
+  border-radius: 10px 10px 0 0;
+  padding-bottom: 10px;
+}
+
+.sidebar-top > img {
+  height: 60px;
+  width: 100%;
+  margin-bottom: -20px;
+  border-bottom: none;
+  border-radius: 10px 10px 0 0;
+}
+
+.sidebar-avatar {
+  margin-bottom: 10px;
+}
+
+.sidebar-top p {
+  color: rgb(92, 92, 92);
+  padding: 10px 20px;
+}
+
+.sidebar-stats {
+  border: 1px solid lightgrey;
+  border-radius: 0 0 10px 10px;
+  padding: 10px 0;
+}
+
+.sidebar-stat {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 10px;
+}
+
+.sidebar-statNumber {
+  color: #0e65c2;
+  font-weight: bold;
 }
