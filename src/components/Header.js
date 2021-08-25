@@ -1,5 +1,8 @@
 import React from "react";
 import "./css/Header.css";
+import HeaderOption from "./HeaderOption";
+
+// Material UI Icons
 import SearchIcon from "@material-ui/icons/Search";
 import HomeIcon from "@material-ui/icons/Home";
 import GroupIcon from "@material-ui/icons/Group";
@@ -33,33 +36,12 @@ function Header() {
         </div>
 
         <div className="nav">
-          <div className="nav-item">
-            <HomeIcon />
-            <p>Home</p>
-          </div>
-          <div className="nav-item">
-            <GroupIcon />
-            <p>My Network</p>
-          </div>
-          <div className="nav-item">
-            <WorkIcon />
-            <p>Jobs</p>
-          </div>
-          <div className="nav-item">
-            <MessageIcon />
-            <p>Messaging</p>
-          </div>
-          <div className="nav-item">
-            <NotificationsIcon />
-            <p>Notifications</p>
-          </div>
-          <div className="nav-item">
-            <div className="nav-profile"></div>
-            <p>
-              Me
-              <ArrowDropDownIcon />
-            </p>
-          </div>
+          <HeaderOption Icon={HomeIcon} title="Home" />
+          <HeaderOption Icon={GroupIcon} title="My&nbsp;Network" />
+          <HeaderOption Icon={WorkIcon} title="Jobs" />
+          <HeaderOption Icon={MessageIcon} title="Messaging" />
+          <HeaderOption Icon={NotificationsIcon} title="Notifications" />
+          <HeaderOption avatar="#" title="Me" />
         </div>
       </div>
     </header>
