@@ -2,7 +2,15 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  padding: 20px;
+  padding: 10px;
+  /* Sticky Navbar */
+  position: fixed;
+  top: 0;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 100;
+  overflow: hidden;
+  border: 1px solid rgb(214, 214, 214);
 }
 
 .logo {
@@ -20,10 +28,14 @@
 input {
   border: none;
   border-radius: 3px;
-  box-shadow: 0 0 5px rgb(194, 194, 194);
-  padding: 12px;
+  border: 1px solid rgb(214, 214, 214);
+  background-color: rgb(233, 233, 233);
+  padding: 10px;
   font-size: 15px;
-  width: 300px;
+  width: 25vw;
+}
+input:focus {
+  outline: none;
 }
 .search-icon {
   position: relative;
@@ -38,18 +50,15 @@ input {
   text-align: center;
   gap: 25px;
 }
-.nav-item p {
-  font-size: 15px;
-  font-family: sans-serif;
-}
-.nav-profile {
+
+/* .nav-profile {
   background-image: url("./assets/me.jpg");
   background-size: cover;
   height: 27px;
   width: 27px;
   border-radius: 50%;
-}
-.nav-profile + p {
+} */
+/* .nav-profile + p {
   display: flex;
   align-items: center;
-}
+} */
