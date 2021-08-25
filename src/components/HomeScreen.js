@@ -7,7 +7,9 @@ function HomeScreen() {
   return (
     <div className="home-screen">
       <Header />
-      <Sidebar />
+      <div className="page-body">
+        <Sidebar />
+      </div>
     </div>
   );
 }

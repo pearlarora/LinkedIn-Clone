@@ -50,15 +50,3 @@ input:focus {
   text-align: center;
   gap: 25px;
 }
-
-/* .nav-profile {
-  background-image: url("./assets/me.jpg");
-  background-size: cover;
-  height: 27px;
-  width: 27px;
-  border-radius: 50%;
-} */
-/* .nav-profile + p {
-  display: flex;
-  align-items: center;
-} */

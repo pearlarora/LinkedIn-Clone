@@ -9,7 +9,6 @@ import GroupIcon from "@material-ui/icons/Group";
 import WorkIcon from "@material-ui/icons/Work";
 import MessageIcon from "@material-ui/icons/Message";
 import NotificationsIcon from "@material-ui/icons/Notifications";
-import ArrowDropDownIcon from "@material-ui/icons/ArrowDropDown";
 
 function Header() {
   return (
