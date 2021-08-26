@@ -1,4 +1,6 @@
 .page-body {
-  display: grid;
-  grid-template-columns: 1fr 3fr 1fr;
+  background-color: #f3f2ef;
+  padding-top: 90px;
+  display: flex;
+  justify-content: space-evenly;
 }
