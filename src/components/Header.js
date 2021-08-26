@@ -1,6 +1,7 @@
 import React from "react";
 import "./css/Header.css";
 import HeaderOption from "./HeaderOption";
+import me from "../components/css/assets/me.jpg";
 
 // Material UI Icons
 import SearchIcon from "@material-ui/icons/Search";
@@ -40,7 +41,7 @@ function Header() {
           <HeaderOption Icon={WorkIcon} title="Jobs" />
           <HeaderOption Icon={MessageIcon} title="Messaging" />
           <HeaderOption Icon={NotificationsIcon} title="Notifications" />
-          <HeaderOption avatar="#" title="Me" />
+          <HeaderOption avatar={me} title="Me" />
         </div>
       </div>
     </header>
