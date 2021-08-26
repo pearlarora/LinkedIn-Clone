@@ -3,9 +3,10 @@ h4 {
 }
 
 .sidebar {
-  margin-top: 100px;
-  /* position: sticky;
-  top: 100px; */
+  position: sticky;
+  top: 100px;
+  flex: 0.2;
+  z-index: 2;
   border-radius: 10px;
   text-align: center;
   height: fit-content;
@@ -15,6 +16,9 @@ h4 {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.sidebar-top, .sidebar-bottom {
   border: 1px solid lightgrey;
   border-bottom: none;
   border-radius: 10px 10px 0 0;
@@ -54,4 +58,18 @@ h4 {
 .sidebar-statNumber {
   color: #0e65c2;
   font-weight: bold;
+}
+
+.sidebar-bottom {
+  text-align: left;
+  padding: 10px;
+  margin-top: 12px;
+}
+
+.sidebar-recentItem {
+  display: flex;
+  gap: 10px;
+  color: rgb(92, 92, 92);
+  font-weight: bold;
+  margin: 10px 0 0 20px;
 }
