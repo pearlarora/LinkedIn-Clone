@@ -1,6 +1,10 @@
-.page-body {
+.home-screen {
   background-color: #f3f2ef;
-  padding-top: 90px;
+  min-height: 100vh;
+}
+
+.page-body {
+  padding-top: 80px;
   display: flex;
   justify-content: space-evenly;
 }
