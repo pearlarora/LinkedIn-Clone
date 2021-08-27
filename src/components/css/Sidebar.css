@@ -25,15 +25,17 @@ h4 {
 }
 
 .sidebar-top > img {
-  height: 60px;
+  height: 70px;
   width: 100%;
-  margin-bottom: -20px;
+  margin-bottom: -40px;
   border-bottom: none;
   border-radius: 10px 10px 0 0;
 }
 
 .sidebar-avatar {
   margin-bottom: 10px;
+  height: 80px !important;
+  width: 80px !important;
 }
 
 .sidebar-top p {
