@@ -1,0 +1,13 @@
+.input-option {
+  margin: 5px 20px 0 20px;
+}
+
+.option-item {
+  display: flex;
+  align-items: center;
+}
+
+.option-item h5 {
+  margin-left: 10px;
+  color: rgb(110, 110, 110);
+}
