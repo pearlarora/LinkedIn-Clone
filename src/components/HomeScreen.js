@@ -2,6 +2,7 @@ import React from "react";
 import "./css/HomeScreen.css";
 import Header from "./Header";
 import Sidebar from "./Sidebar";
+import Feed from "./Feed";
 
 function HomeScreen() {
   return (
@@ -9,6 +10,7 @@ function HomeScreen() {
       <Header />
       <div className="page-body">
         <Sidebar />
+        <Feed />
       </div>
     </div>
   );

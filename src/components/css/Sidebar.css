@@ -77,3 +77,8 @@ h4 {
   font-weight: bold;
   margin: 10px 0 0 20px;
 }
+
+.sidebar-recentItem:hover {
+  color: black;
+  cursor: default;
+}
