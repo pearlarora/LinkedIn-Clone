@@ -6,7 +6,6 @@ h4 {
   position: sticky;
   top: 400px;
   flex: 0.2;
-  z-index: 2;
   border-radius: 10px;
   text-align: center;
   height: fit-content;
