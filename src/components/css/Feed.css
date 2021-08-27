@@ -1,0 +1,35 @@
+.feed {
+  flex: 0.6;
+}
+
+.start-post {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  padding: 10px 15px;
+  border: 1px solid rgb(214, 214, 214);
+  border-radius: 10px;
+}
+
+.startPost-avatar {
+  height: 45px !important;
+  width: 45px !important;
+}
+
+.start-post button {
+  text-align: left;
+  font-size: 15px;
+  font-weight: bold;
+  color: grey;
+  padding: 15px 18px;
+  width: 27vw;
+  margin-left: 10px;
+  border-radius: 25px;
+  background-color: #fff;
+  border: 1px solid rgb(158, 158, 158);
+}
+.start-post button:hover {
+  background-color: #EBEBEB;
+  cursor: pointer;
+}
