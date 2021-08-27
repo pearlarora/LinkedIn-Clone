@@ -41,8 +41,9 @@ textarea {
 
 .feed-input {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
+  margin-bottom: -10px;
 }
 
 .publish {

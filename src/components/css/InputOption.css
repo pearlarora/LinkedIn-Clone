@@ -1,10 +1,12 @@
-.input-option {
-  margin: 5px 20px 0 20px;
-}
-
 .option-item {
   display: flex;
   align-items: center;
+  padding: 10px;
+}
+.option-item:hover {
+  border-radius: 5px;
+  background-color: rgba(146, 146, 146, 0.308);
+  cursor: pointer;
 }
 
 .option-item h5 {
