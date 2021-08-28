@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./css/Feed.css";
 import PostOption from "./PostOption";
 import Post from "./Post";
+import { db } from "../firebase";
 
 // Material UI
 import { Avatar, Divider } from "@material-ui/core";
@@ -14,9 +15,20 @@ import PostAddIcon from "@material-ui/icons/PostAdd";
 function Feed() {
   const [posts, setPosts] = useState([]);
 
-  const publishPost = event => {
+  useEffect(() => {
+    db.collection("posts").onSnapshot((snapshot) =>
+      setPosts(
+        snapshot.docs.map((doc) => ({
+          id: doc.id,
+          data: doc.data(),
+        }))
+      )
+    );
+  }, []);
+
+  const publishPost = (event) => {
     event.preventDefault();
-  }
+  };
 
   return (
     <div className="feed">
@@ -42,7 +54,9 @@ function Feed() {
               title="Write article"
               color="#FD9294"
             />
-            <button onClick={publishPost} type="submit" className="publish">Publish</button>
+            <button onClick={publishPost} type="submit" className="publish">
+              Publish
+            </button>
           </div>
         </form>
       </div>
