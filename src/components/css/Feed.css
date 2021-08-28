@@ -7,6 +7,7 @@
   padding: 15px;
   border: 1px solid rgb(214, 214, 214);
   border-radius: 10px;
+  margin-bottom: 10px;
 }
 .feed-container form {
   display: flex;
@@ -39,10 +40,11 @@ textarea {
   color: rgb(182, 182, 182);
 }
 
-.feed-input {
+.feed-option {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  margin-top: 5px;
   margin-bottom: -10px;
 }
 

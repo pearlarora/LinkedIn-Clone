@@ -1,7 +1,7 @@
 import React from "react";
-import "./css/InputOption.css"
+import "./css/PostOption.css"
 
-function InputOption({ Icon, title, color }) {
+function PostOption({ Icon, title, color }) {
   return (
     <div className="input-option">
       <div className="option-item">
@@ -12,4 +12,4 @@ function InputOption({ Icon, title, color }) {
   );
 }
 
-export default InputOption;
+export default PostOption;

@@ -3,7 +3,7 @@ import "./css/Header.css";
 import HeaderOption from "./HeaderOption";
 import me from "../components/css/assets/me.jpg";
 
-// Material UI Icons
+// Material UI
 import SearchIcon from "@material-ui/icons/Search";
 import HomeIcon from "@material-ui/icons/Home";
 import GroupIcon from "@material-ui/icons/Group";

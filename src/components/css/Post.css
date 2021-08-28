@@ -1,0 +1,30 @@
+.post-header {
+  padding: 0 10px;
+	margin-bottom: 15px;
+  display: flex;
+	align-items: center;
+  gap: 10px;
+}
+
+.postHeader-info p {
+  color: rgb(99, 97, 97);
+  font-size: 14px;
+}
+
+.post-body img {
+  margin: 10px 0;
+	width: 100%;
+	height: auto;
+	max-height: 450px;
+	size: cover;
+}
+
+.post-option {
+  justify-content: space-between;
+}
+
+.post-review {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
