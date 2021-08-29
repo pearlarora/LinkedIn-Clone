@@ -27,6 +27,7 @@
 	height: auto;
 	max-height: 450px;
 	size: cover;
+  margin-top: 10px;
 }
 
 .post-option {
