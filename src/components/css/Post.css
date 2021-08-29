@@ -1,3 +1,11 @@
+.feed-post {
+  background-color: #fff;
+  padding: 15px;
+  border: 1px solid rgb(214, 214, 214);
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
 .post-header {
   padding: 0 10px;
 	margin-bottom: 15px;
@@ -11,8 +19,10 @@
   font-size: 14px;
 }
 
-.post-body img {
+.post-body {
   margin: 10px 0;
+}
+.post-body img {
 	width: 100%;
 	height: auto;
 	max-height: 450px;

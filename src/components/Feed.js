@@ -3,6 +3,7 @@ import "./css/Feed.css";
 import PostOption from "./PostOption";
 import Post from "./Post";
 import { db } from "../firebase";
+import firebase from "firebase";
 
 // Material UI
 import { Avatar, Divider } from "@material-ui/core";
@@ -13,21 +14,34 @@ import TodayIcon from "@material-ui/icons/Today";
 import PostAddIcon from "@material-ui/icons/PostAdd";
 
 function Feed() {
+  const [input, setInput] = useState("");
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
-    db.collection("posts").onSnapshot((snapshot) =>
-      setPosts(
-        snapshot.docs.map((doc) => ({
-          id: doc.id,
-          data: doc.data(),
-        }))
-      )
-    );
+    db.collection("posts")
+      .orderBy("timestamp", "desc")
+      .onSnapshot((snapshot) =>
+        setPosts(
+          snapshot.docs.map((doc) => ({
+            id: doc.id,
+            data: doc.data(),
+          }))
+        )
+      );
   }, []);
 
   const publishPost = (event) => {
     event.preventDefault();
+
+    db.collection("posts").add({
+      name: "Name",
+      desc: "This is the desc.",
+      msg: input,
+      photoUrl: "",
+      timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+    });
+
+    setInput("");
   };
 
   return (
@@ -36,7 +50,12 @@ function Feed() {
         <form action="">
           <div className="feed-write">
             <Avatar src={me} className="feed-avatar" />
-            <textarea rows="5" placeholder="What do you want to talk about?" />
+            <textarea
+              value={input}
+              onChange={(event) => setInput(event.target.value)}
+              rows="5"
+              placeholder="What do you want to talk about?"
+            />
           </div>
 
           <Divider />
@@ -61,14 +80,16 @@ function Feed() {
         </form>
       </div>
 
-      <div className="feed-container">
-        <Post
-          avatar={me}
-          name="Pearl Arora"
-          desc="This is a test desc"
-          msg="This is a test msg"
-          photoUrl="https://www.lotus-qa.com/wp-content/uploads/2020/02/testing.jpg"
-        />
+      <div className="posts-container">
+        {posts.map(({ id, data: { name, desc, msg, photoUrl } }) => (
+          <Post
+            key={id}
+            name={name}
+            desc={desc}
+            msg={msg}
+            photoUrl={photoUrl}
+          />
+        ))}
       </div>
     </div>
   );

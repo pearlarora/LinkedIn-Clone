@@ -1,5 +1,6 @@
 .feed {
-  flex: 0.6;
+  flex: 0.4;
+  margin: 0 20px;
 }
 
 .feed-container {

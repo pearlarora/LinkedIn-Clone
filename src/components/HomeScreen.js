@@ -3,6 +3,7 @@ import "./css/HomeScreen.css";
 import Header from "./Header";
 import Sidebar from "./Sidebar";
 import Feed from "./Feed";
+import Widgets from "./Widgets";
 
 function HomeScreen() {
   return (
@@ -11,6 +12,7 @@ function HomeScreen() {
       <div className="page-body">
         <Sidebar />
         <Feed />
+        <Widgets />
       </div>
     </div>
   );

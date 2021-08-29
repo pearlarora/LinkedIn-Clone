@@ -22,7 +22,7 @@ function Post({ avatar, name, desc, msg, photoUrl }) {
 
       <div className="post-body">
         <p>{msg}</p>
-        <img src={photoUrl} alt="post" />
+        {photoUrl && <img src={photoUrl} alt="post" />}
       </div>
       <Divider />
 

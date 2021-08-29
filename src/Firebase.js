@@ -1,7 +1,7 @@
 import firebase from "firebase";
 import "firebase/firestore";
 
-const firebaseConfig = firebase.initializeApp({
+const firebaseApp = firebase.initializeApp({
   apiKey: "AIzaSyCBwF9oPFohB5ne1amElQmh_3P4endop5M",
   authDomain: "linkedin-clone-7c317.firebaseapp.com",
   projectId: "linkedin-clone-7c317",

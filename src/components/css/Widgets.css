@@ -1,0 +1,10 @@
+.widgets {
+  flex: 0.2;
+}
+
+.widgets-container {
+  background-color: #fff;
+  padding: 15px;
+  border: 1px solid rgb(214, 214, 214);
+  border-radius: 10px;
+}
