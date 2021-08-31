@@ -18,8 +18,9 @@
   display: flex;
   align-items: center;
 }
-.logo svg {
-  font-size: 45px;
+.logo-icon  {
+  font-size: 45px !important;
+  color: #0E65C2;
 }
 
 .search {
