@@ -43,7 +43,7 @@ function Signin() {
           <div className="common-page-swap">
             <p>
               New to LinkedIn? &nbsp;
-              <a href="">Sign up</a>
+              <a href="/signup">Sign up</a>
             </p>
           </div>
         </div>

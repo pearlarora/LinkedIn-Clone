@@ -15,8 +15,12 @@ function LandingPage() {
           <LinkedInIcon className="logo-icon" />
         </div>
         <div className="landing-buttons">
-          <button>Sign in</button>
-          <button>Sign up</button>
+          <a href="/signin">
+            <button>Sign in</button>
+          </a>
+          <a href="/signup">
+            <button>Sign un</button>
+          </a>
         </div>
       </div>
       <div className="common-component landing-component">
@@ -28,23 +32,32 @@ function LandingPage() {
             Developed by <b>Pearl Arora</b>
           </p>
           <div className="landing-buttons">
-            <button>
-              <span>Check out source code at</span> Github
-            </button>
-            <button>
-              <span>Check out my</span> Personal Portfolio
-            </button>
+            <a href="https://github.com/pearlarora/LinkedIn-Clone">
+              <button>
+                <span>Check out source code at</span> Github
+              </button>
+            </a>
+            <a href="/">
+              <button>
+                <span>Check out my</span> Personal Portfolio
+              </button>
+            </a>
           </div>
           <div className="social-media">
-            <a href="">
+            <a href="https://www.linkedin.com/in/pearlarora/">
               <LinkedInIcon className="logo-icon" />
             </a>
-            <a href="">
+            <a href="https://github.com/pearlarora">
               <GitHubIcon className="socialMedia-icons" />
             </a>
           </div>
         </div>
-        <img style={{width: "40vw"}} className="right-illustation" src={landing} alt="Design purpose" />
+        <img
+          style={{ width: "40vw" }}
+          className="right-illustation"
+          src={landing}
+          alt="Design purpose"
+        />
       </div>
       <div className="common-footer">
         <p>Developed by Pearl Arora on React</p>
