@@ -37,7 +37,7 @@ function Sidebar() {
         </div>
       </div>
 
-      <div className="sidebar-bottom">
+      <div className="sidebar-bottom feed-container">
         <h3>Recent</h3>
         {topics.map((topic) => recentItem(topic))}
       </div>

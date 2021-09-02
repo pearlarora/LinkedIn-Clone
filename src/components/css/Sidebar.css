@@ -17,10 +17,6 @@ h4 {
   align-items: center;
   border-bottom: none;
   border-radius: 10px 10px 0 0;
-}
-
-.sidebar-top,
-.sidebar-bottom {
   background-color: #fff;
   border: 1px solid lightgrey;
   padding-bottom: 10px;
