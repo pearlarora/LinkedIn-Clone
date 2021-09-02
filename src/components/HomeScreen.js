@@ -20,22 +20,30 @@ function HomeScreen() {
   const user = useSelector(selectUser);
 
   return (
-    <Router>
-      <div className="home">
-        {!user ? (
-          <Routes />
-        ) : (
-          <div className="home-screen">
-            <Header />
-            <div className="page-body">
-              <Sidebar />
-              <Feed />
-              <Widgets />
-            </div>
-          </div>
-        )}
+    // <Router>
+    //   <div className="home">
+    //     {!user ? (
+    //       <Routes />
+    //     ) : (
+    //       <div className="home-screen">
+    //         <Header />
+    //         <div className="page-body">
+    //           <Sidebar />
+    //           <Feed />
+    //           <Widgets />
+    //         </div>
+    //       </div>
+    //     )}
+    //   </div>
+    // </Router>
+    <div className="home-screen">
+      <Header />
+      <div className="page-body">
+        <Sidebar />
+        <Feed />
+        <Widgets />
       </div>
-    </Router>
+    </div>
   );
 }
 

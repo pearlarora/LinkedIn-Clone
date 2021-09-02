@@ -1,4 +1,8 @@
 import React from "react";
+import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { login } from "../features/userSlice";
+import { auth } from "firebase";
 import "./css/SignInUp.css";
 
 //Material UI
@@ -6,8 +10,38 @@ import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import { Divider } from "@material-ui/core";
 
 function Signup() {
-  return <div className="linkedIn-signup">
-    <div className="common-component">
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const dispatch = useDispatch();
+
+  const registerUser = (event) => {
+    event.preventDefault();
+    auth
+      .createUserWithEmailAndPassword(email, password)
+      .then((userAuth) => {
+        userAuth.user
+          .updateProfile({
+            displayName: name,
+          })
+          .then(() => {
+            dispatch(
+              login({
+                uid: userAuth.user.uid,
+                displayName: name,
+                email: userAuth.user.email,
+              })
+            );
+          });
+      })
+      .catch((error) => {
+        alert(error);
+      });
+  };
+
+  return (
+    <div className="linkedIn-signup">
+      <div className="common-component">
         <div className="left-desc">
           <div className="logo logo-float">
             <h1>Linked</h1>
@@ -25,11 +59,34 @@ function Signup() {
         <div className="right-form">
           <h1>Sign Up</h1>
           <form action="" className="common-form">
-            <input type="text" placeholder="Full Name" />
-            <input type="email" placeholder="Email" />
-            <input type="tel" placeholder="Contact" />
-            <input type="password" placeholder="Password (6 or more characters)" required />
-            <button className="submit-button">Sign up</button>
+            <input
+              value={name}
+              onChange={(event) => setName(event.target.value)}
+              type="text"
+              placeholder="Full Name"
+              required
+            />
+            <input
+              value={email}
+              onChange={(event) => setEmail(event.target.value)}
+              type="email"
+              placeholder="Email"
+              required
+            />
+            <input
+              value={password}
+              onChange={(event) => setPassword(event.target.value)}
+              type="password"
+              placeholder="Password (6 or more characters)"
+              required
+            />
+            <button
+              type="submit"
+              onClick={registerUser}
+              className="submit-button"
+            >
+              Sign up
+            </button>
             <div className="or-element">
               <Divider className="or-divider" />
               <p>or</p>
@@ -51,7 +108,8 @@ function Signup() {
       <div className="common-footer">
         <p>Developed by Pearl Arora on React</p>
       </div>
-  </div>;
+    </div>
+  );
 }
 
 export default Signup;

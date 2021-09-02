@@ -19,7 +19,7 @@ function LandingPage() {
             <button>Sign in</button>
           </a>
           <a href="/signup">
-            <button>Sign un</button>
+            <button>Sign up</button>
           </a>
         </div>
       </div>
@@ -37,7 +37,7 @@ function LandingPage() {
                 <span>Check out source code at</span> Github
               </button>
             </a>
-            <a href="/">
+            <a href="https://pearlarora.github.io/Designique-portfolio/">
               <button>
                 <span>Check out my</span> Personal Portfolio
               </button>

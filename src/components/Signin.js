@@ -1,11 +1,15 @@
 import React from "react";
 import "./css/SignInUp.css";
 
-//Material UI
+// Material UI
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import { Divider } from "@material-ui/core";
 
 function Signin() {
+  const loginUser = (event) => {
+    event.preventDefault();
+  };
+
   return (
     <div className="linkedIn-signin">
       <div className="common-component">
@@ -26,10 +30,12 @@ function Signin() {
         <div className="right-form">
           <h1>Sign In</h1>
           <form action="" className="common-form">
-            <input type="email" placeholder="Email" />
+            <input type="email" placeholder="Email" required />
             <input type="password" placeholder="Password" required />
             <a href="">Forgot password?</a>
-            <button className="submit-button">Sign in</button>
+            <button type="submit" onClick={loginUser} className="submit-button">
+              Sign in
+            </button>
             <div className="or-element">
               <Divider className="or-divider" />
               <p>or</p>
