@@ -5,9 +5,12 @@ import { login } from "../features/userSlice";
 import { auth } from "firebase";
 import "./css/SignInUp.css";
 
+// import RegisterUser from "./customHooks";
+
 //Material UI
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import { Divider } from "@material-ui/core";
+import { SettingsInputSvideo } from "@material-ui/icons";
 
 function Signup() {
   const [name, setName] = useState("");
@@ -39,6 +42,15 @@ function Signup() {
       });
   };
 
+  // const signupAlert = () => {
+  //   alert(`
+  //   User Created!
+  //   Name: ${input.name}
+  //   Email: ${input.email}
+  //   `);
+  // };
+  // const { handleSubmit, handleChange, input } = RegisterUser(signupAlert);
+
   return (
     <div className="linkedIn-signup">
       <div className="common-component">
@@ -58,10 +70,13 @@ function Signup() {
 
         <div className="right-form">
           <h1>Sign Up</h1>
-          <form action="" className="common-form">
+          {/* <form onSubmit={handleSubmit} className="common-form"> */}
+          <form className="common-form">
             <input
               value={name}
               onChange={(event) => setName(event.target.value)}
+              // value={input.name}
+              // onChange={handleChange}
               type="text"
               placeholder="Full Name"
               required
@@ -69,6 +84,8 @@ function Signup() {
             <input
               value={email}
               onChange={(event) => setEmail(event.target.value)}
+              // value={input.email}
+              // onChange={handleChange}
               type="email"
               placeholder="Email"
               required
@@ -76,8 +93,10 @@ function Signup() {
             <input
               value={password}
               onChange={(event) => setPassword(event.target.value)}
+              // value={input.password}
+              // onChange={handleChange}
               type="password"
-              placeholder="Password (6 or more characters)"
+              placeholder="Password"
               required
             />
             <button

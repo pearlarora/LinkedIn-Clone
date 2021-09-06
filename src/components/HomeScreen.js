@@ -4,9 +4,9 @@ import { useSelector } from "react-redux";
 // Page Components
 import "./css/HomeScreen.css";
 import { selectUser } from "../features/userSlice";
-import LandingPage from "./LandingPage";
-import Signin from "./Signin";
-import Signup from "./Signup";
+// import LandingPage from "./LandingPage";
+// import Signin from "./Signin";
+// import Signup from "./Signup";
 import Header from "./Header";
 import Sidebar from "./Sidebar";
 import Feed from "./Feed";
@@ -20,30 +20,31 @@ function HomeScreen() {
   const user = useSelector(selectUser);
 
   return (
-    // <Router>
-    //   <div className="home">
-    //     {!user ? (
-    //       <Routes />
-    //     ) : (
-    //       <div className="home-screen">
-    //         <Header />
-    //         <div className="page-body">
-    //           <Sidebar />
-    //           <Feed />
-    //           <Widgets />
-    //         </div>
-    //       </div>
-    //     )}
-    //   </div>
-    // </Router>
-    <div className="home-screen">
-      <Header />
-      <div className="page-body">
-        <Sidebar />
-        <Feed />
-        <Widgets />
+    <Router>
+      <div className="home">
+        {!user ? (
+          <Routes />
+        ) : (
+          <div className="home-screen">
+            <Header />
+            <div className="page-body">
+              <Sidebar />
+              <Feed />
+              <Widgets />
+            </div>
+          </div>
+        )}
       </div>
-    </div>
+    </Router>
+
+    // <div className="home-screen">
+    //   <Header />
+    //   <div className="page-body">
+    //     <Sidebar />
+    //     <Feed />
+    //     <Widgets />
+    //   </div>
+    // </div>
   );
 }
 
